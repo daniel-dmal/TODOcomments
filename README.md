@@ -1,71 +1,42 @@
-# todocomments README
+# TODO Highlighter & Viewer Extension
 
-This is the README for your extension "todocomments". After writing up a brief description, we recommend including the following sections.
+A simple VS Code extension that highlights `TODO:` and `FIXME:` comments in your code, making them more visible and easier to track.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Highlights `TODO:` comments in **orange** with a light yellow background.
+- Groups TODOs by file in the Tree View panel.
+- Automatically applies highlighting on startup and when switching files.
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
 
-\!\[feature X\]\(images/feature-x.png\)
+- Open any file with `TODO:` or `FIXME:` comments.
+- The comments will be highlighted automatically.
+- Open the **TODO Tree View** from the VS Code sidebar to see all TODOs grouped by file.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Commands
 
-## Requirements
+| Command                     | Description                                     |
+| --------------------------- | ----------------------------------------------- |
+| `extension.highlightTodos`  | Highlights TODOs and FIXMEs in the active file. |
+| `extension.refreshTodoTree` | Refreshes the TODO Tree View.                   |
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## How It Works
 
-## Extension Settings
+- **Text Decorations:** The extension scans the open file for `TODO:` and `FIXME:` comments and applies text decorations.
+- **Tree View:** It groups all TODOs by file and displays them in a collapsible tree view.
+- **Automatic Updates:** Highlights are applied when a file is opened, switched, or modified.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Roadmap
 
-For example:
+- [ ] Add support for custom comment tags (e.g., `NOTE:`)
+- [ ] Allow users to configure colors in settings
+- [ ] Display TODO counts in the status bar
 
-This extension contributes the following settings:
+## License
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+This extension is licensed under the MIT License.
 
-## Known Issues
+## Contributing
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Contributions are welcome! Feel free to open an issue or submit a pull request.
